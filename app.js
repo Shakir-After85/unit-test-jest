@@ -1,23 +1,26 @@
 // one euro is:
-let oneEuroIs = {
-    "JPY": 127.9, // japan yen
-    "USD": 1.2, // us dollar
-    "GBP": 0.8, // british pound
-}
+// let oneEuroIs = {
+//     "JPY": 127.9, // japan yen
+//     "USD": 1.2, // us dollar
+//     "GBP": 0.8, // british pound
+// }
 
- const fromDollarToYen = (yen) => {
-    return (yen) * (127.9 / 1.2)
+ const fromDollarToYen = (dollar) => {
+   let yen = (dollar/1.2) * 127.9;
+    return yen;
  }
 
  const fromEuroToDollar = (euro) => {
-    return (euro) * 1.2;
+   let dollar = euro * 1.2;
+    return dollar;
 
  }
 
- const fromYenToPound = (pound) => {
-    return (pound) * (0.8 * 127.9);
+ const fromYenToPound = (yen) => {
+   let pound = (yen/127.9) * 0.8;
+    return pound;
  }
 
- module.exports = {sum, fromEuroToDollar}
- module.exports = {sum, fromDollarToYen}
- module.exports = {sum, fromYenToPound}
+ module.exports = {sum, fromEuroToDollar, fromDollarToYen, fromYenToPound}
+
+ 
